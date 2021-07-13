@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>RESTAURANT</title>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+        <script src="js/jquery.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/custom.js"></script>
+    </head>
+    <body onload="start()">
+        <section>
+            <div class="container my-4">
+                <img src="food1.jpg" class="rounded col-6 float-left " alt="Cinque Terre">
+                <img src="food2.jpg" class="rounded col-6 float-right" alt="Cinque Terre">
+            </div>
+            <h2 class="text-danger text-center font-weight-bold">Select a dish from the Menu</h2>
+        </section>
+        <section>
+            
+            <div class="container">
+                <ul class="list-group font-weight-bold">
+                    <li onclick="mymenu(0)"class="p-3 mb-2 list-group-item bg-dark text-light">1 IDLI(40)</li>
+                    <li onclick="mymenu(1)"class="p-3 mb-2 list-group-item bg-dark text-light">2 POORI (45)</li>
+                    <li onclick="mymenu(2)"class="p-3 mb-2 list-group-item bg-dark text-light">3 VADA(20)</li>
+                    <li onclick="mymenu(3)"class="p-3 mb-2 list-group-item bg-dark text-light">4 DOSA(50)</li>
+                    <li onclick="mymenu(4)"class="p-3 mb-2 list-group-item bg-dark text-light">5 UPMA(20)</li>
+                    <li onclick="mymenu(5)"class="p-3 mb-2 list-group-item bg-dark text-light">6 TEA/COFFEE(10)</li>
+                    <li onclick="createbill()" class="p-3 mb-2 list-group-item bg-dark text-light">7 BILL</li>
+                </ul>
+                <h2 id="selected_item"></h2>
+                <label>QUANTITY = </label>
+                <input type="number" id="quant" name="quant">
+                <br><br>
+                <input type="button" class="bg-danger p-3 btn btn-outline-dark text-light " value="ADD_ORDER" id="add" onclick="order()"><br><br>
+                <ul id="eachitem">
+
+                </ul>
+                <h2 id="bill"></h2>
+            </div>
+        </section>
+
+    </body>
+</html>
